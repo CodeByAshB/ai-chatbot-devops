@@ -42,5 +42,4 @@ jobs:
           username: ${{ secrets.AWS_USER }}
           key: ${{ secrets.AWS_SSH_KEY }}
           script: |
-            KUBECONFIG=/home/ubuntu/.kube/config kubectl delete pod -l app=ai-chatbot --force --grace-period=0
-
+            kubectl --kubeconfig=/home/ubuntu/.kube/config delete pod -l app=ai-chatbot --force --grace-period=0
