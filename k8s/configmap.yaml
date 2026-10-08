@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: ai-chatbot-config
+data:
+  OLLAMA_URL: "http://host.docker.internal:11434/api/generate"
+  OLLAMA_MODEL: "llama3.2"

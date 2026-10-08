@@ -3,3 +3,15 @@ __pycache__/
 *.pyc
 .DS_Store
 .env
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+crash.log
+
+# SSH keys
+*.pem
+*.key
+id_*

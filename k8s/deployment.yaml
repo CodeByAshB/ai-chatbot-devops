@@ -16,10 +16,25 @@ spec:
     spec:
       containers:
         - name: ai-chatbot
-          image: ai-chatbot:latest
-          imagePullPolicy: IfNotPresent
+          image: aishwaryaborase/ai-chatbot:latest
+          imagePullPolicy: Always
           ports:
             - containerPort: 5000
+          envFrom:
+            - configMapRef:
+                name: ai-chatbot-config
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 5000
+            initialDelaySeconds: 5
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 5000
+            initialDelaySeconds: 15
+            periodSeconds: 20
           resources:
             requests:
               memory: "128Mi"
