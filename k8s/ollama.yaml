@@ -29,6 +29,11 @@ spec:
       containers:
         - name: ollama
           image: ollama/ollama:0.30.10
+          command: ["/bin/sh", "-c"]
+          args:
+            - |
+              mv /usr/lib/ollama/libggml-cpu-sapphirerapids.so /usr/lib/ollama/libggml-cpu-sapphirerapids.so.disabled 2>/dev/null || true
+              exec ollama serve
           ports:
             - containerPort: 11434
           env:
