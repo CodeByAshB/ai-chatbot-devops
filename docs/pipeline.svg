@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 735" width="1200" height="735" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
-  <defs>
+  <defs><style>.flow{stroke-dasharray:7 6;animation:flow 1s linear infinite}@keyframes flow{to{stroke-dashoffset:-13}}@media (prefers-reduced-motion:reduce){.flow{animation:none}}</style>
     <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
       <path d="M0 0 L10 5 L0 10 z" fill="#475569"/>
     </marker>
@@ -53,20 +53,20 @@
   <text x="1035" y="196" text-anchor="middle" font-size="12" fill="#374151">new tag into</text>
   <text x="1035" y="214" text-anchor="middle" font-size="12" fill="#374151">deployment.yaml</text>
 
-  <line x1="210" y1="185" x2="238" y2="185" stroke="#475569" stroke-width="2" marker-end="url(#arr)"/>
-  <line x1="390" y1="185" x2="418" y2="185" stroke="#475569" stroke-width="2" marker-end="url(#arr)"/>
-  <line x1="570" y1="185" x2="598" y2="185" stroke="#475569" stroke-width="2" marker-end="url(#arr)"/>
-  <line x1="750" y1="185" x2="778" y2="185" stroke="#475569" stroke-width="2" marker-end="url(#arr)"/>
-  <line x1="930" y1="185" x2="958" y2="185" stroke="#475569" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="210" y1="185" x2="238" y2="185" class="flow" stroke="#475569" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="390" y1="185" x2="418" y2="185" class="flow" stroke="#475569" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="570" y1="185" x2="598" y2="185" class="flow" stroke="#475569" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="750" y1="185" x2="778" y2="185" class="flow" stroke="#475569" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="930" y1="185" x2="958" y2="185" class="flow" stroke="#475569" stroke-width="2" marker-end="url(#arr)"/>
 
   <rect x="250" y="272" width="130" height="22" rx="11" fill="#fee2e2" stroke="#ef4444"/>
   <text x="315" y="287" text-anchor="middle" font-size="11" font-weight="600" fill="#b91c1c">fail = pipeline stops</text>
   <rect x="610" y="272" width="130" height="22" rx="11" fill="#fee2e2" stroke="#ef4444"/>
   <text x="675" y="287" text-anchor="middle" font-size="11" font-weight="600" fill="#b91c1c">fail = pipeline stops</text>
 
-  <path d="M855 260 V340 H155 V408" fill="none" stroke="#475569" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#arr)"/>
+  <path d="M855 260 V340 H155 V408" fill="none" stroke="#475569" stroke-width="2" stroke-dasharray="6 5" class="flow" marker-end="url(#arr)"/>
   <text x="505" y="334" text-anchor="middle" font-size="11" fill="#475569">image is stored on Docker Hub, tagged with the commit SHA</text>
-  <line x1="1035" y1="260" x2="1035" y2="408" stroke="#475569" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="1035" y1="260" x2="1035" y2="408" class="flow" stroke="#475569" stroke-width="2" marker-end="url(#arr)"/>
   <text x="1025" y="345" text-anchor="end" font-size="11" fill="#475569">commits the new tag to Git</text>
 
   <rect x="30" y="360" width="1140" height="205" rx="12" fill="#f4faf1" stroke="#c9dfbf"/>
@@ -96,16 +96,16 @@
   <text x="1025" y="486" text-anchor="middle" font-size="12" fill="#374151">holds the desired state</text>
   <text x="1025" y="504" text-anchor="middle" font-size="12" fill="#374151">and the new image tag</text>
 
-  <line x1="900" y1="470" x2="842" y2="470" stroke="#475569" stroke-width="2" marker-end="url(#arr)"/>
-  <line x1="610" y1="470" x2="552" y2="470" stroke="#475569" stroke-width="2" marker-end="url(#arr)"/>
-  <line x1="260" y1="470" x2="318" y2="470" stroke="#475569" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="900" y1="470" x2="842" y2="470" class="flow" stroke="#475569" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="610" y1="470" x2="552" y2="470" class="flow" stroke="#475569" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="260" y1="470" x2="318" y2="470" class="flow" stroke="#475569" stroke-width="2" marker-end="url(#arr)"/>
 
   <rect x="30" y="585" width="1140" height="100" rx="12" fill="#fcf7ee" stroke="#ecd9b8"/>
-  <text x="50" y="610" font-size="15" font-weight="700" fill="#7a4d0b">One-time setup: Terraform (infrastructure as code)</text>
+  <text x="50" y="610" font-size="15" font-weight="700" fill="#7a4d0b">One-time setup: Terraform, then kubectl</text>
 
   <rect x="50" y="622" width="260" height="52" rx="8" fill="#ffffff" stroke="#d6b27a" stroke-width="1.5"/>
   <text x="180" y="644" text-anchor="middle" font-size="13" font-weight="700" fill="#111827">terraform apply</text>
-  <text x="180" y="662" text-anchor="middle" font-size="12" fill="#374151">builds everything below</text>
+  <text x="180" y="662" text-anchor="middle" font-size="12" fill="#374151">creates the next two boxes</text>
 
   <rect x="330" y="622" width="260" height="52" rx="8" fill="#ffffff" stroke="#d6b27a" stroke-width="1.5"/>
   <text x="460" y="644" text-anchor="middle" font-size="13" font-weight="700" fill="#111827">Key pair + firewall</text>
@@ -116,12 +116,12 @@
   <text x="740" y="662" text-anchor="middle" font-size="12" fill="#374151">installed on first boot</text>
 
   <rect x="890" y="622" width="260" height="52" rx="8" fill="#ffffff" stroke="#d6b27a" stroke-width="1.5"/>
-  <text x="1020" y="644" text-anchor="middle" font-size="13" font-weight="700" fill="#111827">Argo CD installed</text>
+  <text x="1020" y="644" text-anchor="middle" font-size="13" font-weight="700" fill="#111827">Argo CD (via kubectl)</text>
   <text x="1020" y="662" text-anchor="middle" font-size="12" fill="#374151">then watches this repo</text>
 
-  <line x1="310" y1="648" x2="328" y2="648" stroke="#475569" stroke-width="2" marker-end="url(#arr)"/>
-  <line x1="590" y1="648" x2="608" y2="648" stroke="#475569" stroke-width="2" marker-end="url(#arr)"/>
-  <line x1="870" y1="648" x2="888" y2="648" stroke="#475569" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="310" y1="648" x2="328" y2="648" class="flow" stroke="#475569" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="590" y1="648" x2="608" y2="648" class="flow" stroke="#475569" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="870" y1="648" x2="888" y2="648" class="flow" stroke="#475569" stroke-width="2" marker-end="url(#arr)"/>
 
   <text x="600" y="712" text-anchor="middle" font-size="12" fill="#475569">Pull-based deployment: nothing outside the cluster needs SSH access to the server.</text>
 </svg>
