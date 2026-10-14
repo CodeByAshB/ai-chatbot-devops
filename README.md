@@ -13,6 +13,16 @@ The app is deliberately simple. The point of the project is everything around it
 3. **Publish.** Only an image that passed every check goes to Docker Hub, tagged `latest` and with the commit SHA.
 4. **GitOps.** The pipeline writes the new SHA tag into `k8s/deployment.yaml`. Argo CD, running inside the cluster, sees the change in Git and rolls it out. No SSH access from CI to the server is needed.
 
+## See it running
+
+**Argo CD** – the app and the monitoring stack, both synced from Git and healthy:
+
+![Argo CD applications](docs/argocd.png)
+
+**Grafana** – live CPU, load and memory metrics for the node, collected by Prometheus:
+
+![Grafana node dashboard](docs/grafana.png)
+
 ## Monitoring
 
 Prometheus and Grafana run in the cluster (kube-prometheus-stack, pinned chart version) and are deployed through Argo CD like everything else. Grafana is not exposed to the internet: I reach it through an SSH tunnel, and its admin password lives in a Kubernetes Secret created outside Git. Alertmanager is disabled and retention is 3 days to fit the 8 GB server.
