@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: ai-chatbot
-          image: aishwaryaborase/ai-chatbot:f8562cfed7df4bdd0411d60bb4622a3b75558513
+          image: aishwaryaborase/ai-chatbot:aec666522fa0c40de67dfadb6cfe2325bdf44a11
           imagePullPolicy: Always
           ports:
             - containerPort: 5000
